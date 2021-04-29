@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+:root {
+    --line-fill: #498dba;
+    --line-empty: #cecece;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 350px;
+    max-width: 100%;
+}
+
+.progress-container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.progress-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: var(--line-empty);
+    height: 3px;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: -2;
+}
+
+.progress {
+    position: absolute;
+    width: 0%;
+    left: 0;
+    top: 50%;
+    background-color: var(--line-fill);
+    height: 3px;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: .35s ease;
+}
+
+.circle {
+    width: 30px;
+    text-align: center;
+    border: 3px solid var(--line-empty);
+    border-radius: 50%;
+    background-color: var(--line-empty);
+    color: #fff;
+    transition: .35s ease;
+}
+
+.circle.active {
+    background-color: var(--line-fill);
+    border: 3px solid var(--line-fill);
+}
+
+.controllers {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: 0;
+    font-size: 0.875em;
+    margin: 0 10px;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--line-fill);
+    cursor: pointer;
+}
+
+button:disabled{
+    background-color: var(--line-empty);
+}
+
+button:active {
+    transform: scale(0.95)
+}
+
+    /* line blu, before line gray
+        circle,
+        circle active
+        :root { --line-border-fill: #.498db}, line border-empty. replace with var(--)
+        btn active transform scale
+        focus
+        disabled
+        
+    */ 
