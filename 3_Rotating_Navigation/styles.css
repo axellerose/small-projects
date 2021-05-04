@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    
+ /* 
+ trans-origin top left 
+ transition transform linear
+ */
+}
+
+.container.show-nav{
+    /* trans rotate */
+}
+
+.circle-container {
+    /* 
+        fixed -100
+    */
+}
+
+.circle {
+    /* 
+        make round
+        transition: transform linear
+    */
+}
+
+.circle button {
+    /* 
+        absolute 50%
+    */
+}
+
+.circle button#open {
+    /* 
+        for close position on the left 
+        trans rotate 90 deg
+        trans origin top left
+    */
+}
+
