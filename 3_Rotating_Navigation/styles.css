@@ -8,44 +8,129 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     overflow-x: hidden;
+    background-color: #444;
 }
 
 .container {
-    
- /* 
- trans-origin top left 
- transition transform linear
- */
+    position: relative;
+    padding: 50px;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    height: 100%;
+    background-color: #fafafa;
 }
 
-.container.show-nav{
-    /* trans rotate */
+.content {
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.content h1 {
+    margin: 0;
+    color: #333;
+}
+
+.content small {
+    font-style: italic;
+    color: #555; 
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.content img {
+    max-width: 100%;
 }
 
 .circle-container {
-    /* 
-        fixed -100
-    */
+    position: fixed;
+    top: -100px;
+    left: -100px;
 }
 
 .circle {
-    /* 
-        make round
-        transition: transform linear
-    */
+    width: 200px;
+    height: 200px;
+    background-color: #ff7979;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    transition: transform 0.5s linear;
 }
 
 .circle button {
-    /* 
-        absolute 50%
-    */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 24px;
+    color: #fafafa;
+}
+
+.circle button:focus {
+    outline: none;
 }
 
 .circle button#open {
-    /* 
-        for close position on the left 
-        trans rotate 90 deg
-        trans origin top left
-    */
+    left: 60%;
 }
 
+.circle button#close {
+    top: 60%;
+    transform: rotate(70deg);
+    transform-origin: top left;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);  
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+}
+
+.container.show-nav .circle-container {
+    transform: rotate(-70deg);
+}
+
+nav {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    transition: transform .4s ease-in;
+    padding-left: 30px;
+}
+
+nav ul li {
+    color: #fff;
+    margin: 50px 0;
+    transform: translateX(-100%);
+}
+
+nav ul li i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+nav ul li + li {
+    margin-left: 20px;
+    transform: translateX(-200%);
+    transition: transform .4s ease-in;
+}
+
+nav ul li + li + li {
+    margin-left: 40px;
+    transform: translateX(-150%);
+    transition: transform .4s ease-in;
+}

@@ -3,5 +3,7 @@
 
 ### List of features ###
 0. Project Starter
-1. Expanding Cards
-2. Progress Steps
+1. Expanding Cards (an element expands on click)
+2. Progress Steps (progress line)
+3. Rotating Navigation (onclick menu page rotates and reveals nav menu)
+
