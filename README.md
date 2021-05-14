@@ -7,3 +7,4 @@
 2. Progress Steps (progress line)
 3. Rotating Navigation (onclick menu page rotates and reveals nav menu)
 4. Expanding Serch (onclick search icon the input reveals)
+5. Blury Loading (blur effect changes from 70px to 0px while the page is loading)
